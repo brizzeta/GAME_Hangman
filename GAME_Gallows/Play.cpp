@@ -20,20 +20,22 @@ void Play::Game()
 
 	while (word.Check_tent() && !word.Check_full_hidden_word())
 	{
-		word.Out_hidden_word();     //вывод скрытого слова
-		word.Out_illustr();         //вывод иллюстрации
-		word.Out_letters();         //вывод введенных букв игрока
-		word.Enter();               //ввод буквы
-		word.Check_hidden_word();   //проверка и повторная инициализация элемента скрытого слова
+		cout << "Неверных попыток: " << word.Get_tent();  //вывод попыток
+		cout << endl << endl << endl;
+		word.Out_hidden_word();                           //вывод скрытого слова
+		word.Out_illustr();                               //вывод иллюстрации
+		word.Out_letters();                               //вывод введенных букв игрока
+		word.Enter();                                     //ввод буквы
+		word.Check_hidden_word();                         //проверка и повторная инициализация элемента скрытого слова
 		system("cls");
 	}
 
-	cout << "Неверных попыток: " << word.Get_tent();        //вывод попыток
+	cout << "Неверных попыток: " << word.Get_tent();      //вывод попыток
 	cout << endl << endl << endl;
 	cout << "Загаданное слово: " << word.Get_word();
 	cout << endl << endl << endl;
-	word.Out_illustr();                                       //вывод иллюстрации
-	word.Out_letters();                                       //вывод введенных букв игрока
+	word.Out_illustr();                                   //вывод иллюстрации
+	word.Out_letters();                                   //вывод введенных букв игрока
 
 	if (word.Check_full_hidden_word())
 	{

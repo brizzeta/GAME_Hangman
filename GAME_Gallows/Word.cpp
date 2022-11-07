@@ -129,8 +129,7 @@ bool Word::Check_tent()
 {
 	if (illustr.Get_tent() < 6)
 	{
-		cout << "Неверных попыток: " << illustr.Get_tent();
-		cout << endl << endl << endl;
+		illustr.Get_tent();
 		return 1;
 	}
 	else return 0;
